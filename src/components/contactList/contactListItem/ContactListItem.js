@@ -6,7 +6,7 @@ const ContactListItem = ({ contact:{id, name, number}, onDeleteContact}) => (
     <p>
       {name}: {number}
     </p>
-    <DelButton type="button" onClick={()=>onDeleteContact(id)}>Delete</DelButton>
+    <DelButton type="button" data-id={id} onClick={onDeleteContact}>Delete</DelButton>
   </li>
 );
 

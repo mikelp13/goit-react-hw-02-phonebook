@@ -45,7 +45,8 @@ export default class App extends Component {
     });
   };
 
-  deleteContact = (contactId) => {
+  deleteContact = (e) => {
+    const contactId = e.target.dataset.id;
     this.setState((prevState) => {
       return {
         contacts: prevState.contacts.filter(({ id }) => id !== contactId),
